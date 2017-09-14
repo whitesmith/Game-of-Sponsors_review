@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/ec578832d908e3b33bb1da9c649543e151395c21/aframe/build/aframe-ar.min.js"></script>
+<script>THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>
+    
+     <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script>
+    
+ 
+    <link rel="stylesheet" type="text/css" href="flexboxgrid.min.css">
+    <!--   Importing Flexbox Grid  -->
+    
+     <link rel="stylesheet" type="text/css" href="style.css">
+    <!--   Importing Flexbox Grid  -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+  
+    
+    
+    <link rel="shortcut icon"
+      type="image/png" 
+      href="https://cdn.glitch.com/8a53e8d1-af21-467f-8691-adaee1250b35%2Ficon_drag.png?1504299616488">
+    
+  </head>
+  <body>
+
+
+      
+      
+      <input type="checkbox" id="nav-trigger" class="nav-controller" />
+    <header class="header-bar">
+        <label class="" for="nav-trigger"  tabindex="-1">
+            <div class="button--icon-container">
+                <span class="scan--icon scan--icon--hamburger"></span>
+            </div>
+        </label>
+      
+    </header>
+    
+    <!--sidebar-->
+    
+     <aside class="nav  center-xs">
+        <label class="overlay " for="nav-trigger"></label>  
+        <div class="nav__body ">
+            <div class="nav__header">
+                <a class=" text" href="index.html">  <img class="col-xs-10 col-md-12 dragon_icon"  alt="Ice Dragon" src="https://cdn.glitch.com/8a53e8d1-af21-467f-8691-adaee1250b35%2Fdragon.svg?1504284545840"> </a>
+            </div>
+
+            <ul class="nav__list">
+              
+                 <li class="nav__item" for="nav-trigger">
+                    <a class="nav__link text" href="howto.html">Gameplay </a>
+                </li>
+                
+                   <li class="nav__item" for="nav-trigger">
+                     <a class="nav__link text nav_highlight" href="scan.html">Scanner</a>
+                </li>
+                
+                   <li class="nav__item" for="nav-trigger">
+                    <a class="nav__link text" href="prizes.html">Prizes </a>
+                </li>
+                
+                  <li class="nav__item" for="nav-trigger">
+                    <a class="nav__link text" href="houses.html">Houses </a>
+                </li>
+              
+               <li class="nav__item  row " for="nav-trigger">
+       <p class="small_text u__lowOpacity col-xs-12 center-xs nav__footer" >Made with &hearts; by <a  target="blank" href="www.whitesmith.co">Whitesmith </a> </p> 
+        </li>
+            </ul>
+        </div>
+     
+    </aside>
+   
+<a-scene embedded artoolkit="sourceType: webcam;">
+  
+    
+                                               <!-- —————————————————— INTRO WHITESMITH —————————————————— --> 
+   
+   <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fwhitesmith.patt?1504536312389">
+      <a-entity id="intro_ws"
+                look-at="#marker"
+                material="color:#D3E4E5"
+                geometry="primitive: plane; width:3; height:1.5;"
+                rotation="0 0 0"
+                position="0 0 -1">
+        
+         <a-text material="color:black" scale="0.4 0.4 0.4" font="sourcecodepro" value="We turn your ideas into products\n
+
+House Whitesmith is known for building great web, mobile, and IoT products.\n
+They're considered a team of problem solvers that join their knowledge about UX, Business, and Tech to make products that connect the physical and digital mediums together." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+     
+       <a-plane id="btn_ws" position="0 -1 -1"    material="color:#3A4447" geometry="width:3; height:0.35;" >
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0.05" value="Next"  material="color:black" font="sourcecodepro"  align="center"></a-text>
+          
+        </a-plane>
+     
+    
+                                               <!-- —————————————————— QUESTION WHITESMITH —————————————————— --> 
+   
+       <a-entity id="pergunta_ws"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:0.5;"
+                material="color:#3A4447"
+                rotation="0 0 0"
+                position="0 -0.2 -2"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_ws" visible="false" font="sourcecodepro" value=" Which is the most recent product from House Whitesmith?" position="0 0 0.1" align="center"></a-text>
+        
+      </a-entity>
+     
+     
+      <a-plane visible="false" id="answer_ws" position="0 -0.8 -1.95"  material="color:#D3E4E5" geometry="width:3; height:0.35;">
+          
+          <a-text font="sourcecodepro"  scale="0.4 0.4 0.4" position="0 0 0.05" value="Unplugg" align="center"></a-text>
+          
+        </a-plane>
+     
+     
+       <a-plane visible="false" id="answerr_ws" position="0 -1.8  -1.95"  material="color:#D3E4E5" geometry="width:3; height:0.35;">
+          
+          <a-text font="sourcecodepro"  scale="0.4 0.4 0.4" position="0 0 0.05" value="Soundy" align="center"></a-text>
+          
+        </a-plane>
+     
+     
+      <a-plane visible="false" id="answer2_ws" position="0 -1.3 -1.95"   material="color:#D3E4E5"  geometry="width:3; height:0.35;">
+          
+          <a-text font="sourcecodepro"  scale="0.4 0.4 0.4" position="0 0 0.05" value="Qold" align="center"></a-text>
+          
+        </a-plane>
+     
+       <a-entity id="pergunta_wsW"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:1.5;"
+                material="color:#3A4447"
+                rotation="0 0 0"
+                position="0 -0.2 -2"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_wsW" visible="false" font="sourcecodepro" value=" Too bad traveler!
+It seems as if you need to broaden your knowledge about this house.
+Why not pay them a visit? Maybe they'll reward you in the end.
+Afterwards, why not continue your journey in search of the other houses?" position="0 0 0.1" align="center"></a-text>
+        
+      </a-entity>
+     
+       <a-plane visible="false" class="btn_leave" position="0 -1.3  -1.95"   material="color:#3A4447"  geometry="width:1; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0.05" value="Leave"   font="sourcecodepro"  align="center"></a-text>  </a-plane>
+     
+     
+     
+     <a-entity id="pergunta_wsR"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:1.5;"
+                material="color:#D3E4E5"
+                rotation="0 0 0"
+                position="0 -0.2 -2"
+                visible="false">
+        
+         <a-text  material="color:black" scale="0.4 0.4 0.4" id="texto_wsR" visible="false" font="sourcecodepro" value="Congratulations Traveler!
+We invite you to visit house X so you can gain even MORE knowledge about the realm, it people, and culture.
+Afterwards, why not continue your journey in search of the other houses?" position="0 0 0.1" align="center"></a-text>
+        
+      </a-entity>
+     
+       <a-plane  visible="false" id="btn_wsR" position="0 -1.3  -1.95"   material="color:#3A4447"  geometry="width:3; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0.05" value="Collect Badge" font="sourcecodepro"  align="center"></a-text>  </a-plane>
+  
+     
+    </a-marker>
+    
+    
+                                               <!-- —————————————————— INTRO AWS —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Faws.patt?1504536307583">
+      
+       <a-entity id="intro_aws"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 -1">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Work hard, make history, have fun\n\nHouse AWS presents a cloud computing solution to help costumers go global in minutes, increase speed and agility of their products and also make them stop guessing capacity.\n
+With more than a million active customers, house AWS promises a flexible, scalable, reliable solution for your company.\n" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_aws" position="0 -1.5 -1"   material="color:black"  geometry="width:1; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0.05" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION AWS —————————————————— --> 
+    
+    
+    
+   <a-entity id="pergunta_aws"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:0.5;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_aws" visible="false" font="sourcecodepro" value=" When did Amazon SNS begin to offer dedicated short codes?" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+      
+      
+        <a-plane visible="false" id="answer2_aws" position="0 -1.3 -1.95"   material="color:black"  geometry="width:3; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0.05" value="July 2017" align="center"></a-text>
+          
+        </a-plane>
+      
+      
+      <a-plane visible="false" id="answer_aws" position="0 -0.8 -1.95"   material="color:black"  geometry="width:3; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0.05" value=" January 2017" align="center"></a-text>
+          
+        </a-plane>
+     
+     
+       <a-plane visible="false" id="answerr_aws" position="0 -1.8  -1.95"   material="color:black"  geometry="width:3; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0.05" value="March 2017" align="center"></a-text>
+          
+        </a-plane>
+     
+     
+    
+     
+       <a-entity id="pergunta_awsW"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:1.5;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 -0.2 -2"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_awsW" visible="false" font="sourcecodepro" value=" Too bad traveler!
+It seems as if you need to broaden your knowledge about this house.
+Why not pay them a visit? Maybe they'll reward you in the end.
+Afterwards, why not continue your journey in search of the other houses?" position="0 0 0.1" align="center"></a-text>
+        
+      </a-entity>
+     
+       <a-plane visible="false" id="btn_awsW" position="0 -1.8  -1.95"   material="color:black"  geometry="width:3; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0.05" value="Leave" align="center"></a-text>  </a-plane>
+     
+     
+     
+     <a-entity id="pergunta_awsR"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:1.5;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 -0.2 -2"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_awsR" visible="false" font="sourcecodepro" value="Congratulations Traveler!
+We invite you to visit house X so you can gain even MORE knowledge about the realm, it people, and culture.
+Afterwards, why not continue your journey in search of the other houses?" position="0 0 0.1" align="center"></a-text>
+        
+      </a-entity>
+     
+       <a-plane  visible="false" id="btn_awsR" position="0 -1.8  -1.95"   material="color:black"  geometry="width:3; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0.05" value="Collect Badge" align="center"></a-text>  </a-plane>
+      
+      
+      
+    </a-marker>
+   
+                                             <!-- —————————————————— INTRO BETA_I —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbeta_i?1504540794042">
+      
+       <a-entity id="intro_beta"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Ready when you are\n\n
+
+This house is known for helping businesses grow the startup way by boosting their network, accelerating their ambition and facilitating their access to investment." position=" 0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_beta" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__beta="_event: mouseenter; visible:false; opacity:0;    _target: #intro_beta;"
+               event-set__btn_beta="_event: mouseenter; visible:false; opacity:0;  _target: #btn_beta;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION BETA_I —————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_beta"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_beta" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+    
+    
+    
+                                               <!-- —————————————————— INTRO BRIGHT —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbrp_alternative.patt?1504794970639">
+      
+       <a-entity id="intro_bright"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Invest in sweet dreams\n\n
+What distinguishes House Bright Pixel from many others is how they use their experience, creativity, and know-how to transform how companies address innovation and new ventures." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_bright" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__bright="_event: mouseenter; visible:false; opacity:0;    _target: #intro_bright;"
+               event-set__btn_bright="_event: mouseenter; visible:false; opacity:0;  _target: #btn_bright;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION BRIGHT —————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_bright"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_bright" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+    
+                                               <!-- —————————————————— INTRO CIGALA —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fcigala.patt?1504541214606">
+      
+       <a-entity id="intro_cigala"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="It's our rice\n\n
+
+This house is known for their ancient technique that makes them the best producer of rice of all Westeros and surroundings." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_cigala" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__cigala="_event: mouseenter; visible:false; opacity:0;    _target: #intro_cigala;"
+               event-set__btn_cigala="_event: mouseenter; visible:false; opacity:0;  _target: #btn_cigala;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION CIGALA —————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_cigala"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_cigala" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+                                               <!-- —————————————————— INTRO DATA PITCH —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fdata_alternative.patt?1504795372495">
+      
+       <a-entity id="intro_datap"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Innovation Programme\n\nEveryone knows this house due to their ability to bring together business, organizations, and startups in order to help them meet today's challenges regarding data." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_datap" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__datap="_event: mouseenter; visible:false; opacity:0;    _target: #intro_datap;"
+               event-set__btn_datap="_event: mouseenter; visible:false; opacity:0;  _target: #btn_datap;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION DATA PITCH —————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_datap"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_datap" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+                                               <!-- —————————————————— INTRO EAT TASTY —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Feat_tasty.patt?1504541214948">
+      
+       <a-entity id="intro_eat"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Tasty and ready to eat food\n\nThe core ingredient that makes this House so unique and familiar is the fact that they deliver delicious home-cooked meals in the blink of an eye and deliver them right to your HQ." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_eat" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__eat="_event: mouseenter; visible:false; opacity:0;    _target: #intro_eat;"
+               event-set__btn_eat="_event: mouseenter; visible:false; opacity:0;  _target: #btn_eat;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION EAT TASTY —————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_eat"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_eat" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+                                               <!-- —————————————————— INTRO FEEDZAI —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Ffeedzai.patt?1504541214986">
+      
+       <a-entity id="intro_feedzai"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Prevent Fraud and keep commerce safe\n\nIf you're looking for someone to keep your business safe, these are the guys.\n With a game-changer anti-fraud system, House Feedzai intends to reimagine financial technology in order to make it better for everyone." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_feedzai" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__feedzai="_event: mouseenter; visible:false; opacity:0;    _target: #intro_feedzai;"
+               event-set__btn_feedzai="_event: mouseenter; visible:false; opacity:0;  _target: #btn_feedzai;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION FEEDZAI—————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_feedzai"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_feedzai" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+                                               <!-- —————————————————— INTRO GALP—————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fgalp.patt?1504541215271">
+      
+       <a-entity id="intro_galp"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Energy breeds Energy\n\n House Galp is positioned as an energy integrated company which develops rentable and sustainable business, with the goal of creating value for their shareholders and stakeholders in general." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_galp" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__galp="_event: mouseenter; visible:false; opacity:0;    _target: #intro_galp;"
+               event-set__btn_galp="_event: mouseenter; visible:false; opacity:0;  _target: #btn_galp;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION GALP —————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_galp"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_galp" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+                                               <!-- —————————————————— INTRO GROW —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fgrow_health.patt?1504541215570">
+      
+       <a-entity id="intro_grow"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Innovators wanted\n\nBy using their experts to check if your product is ready for real-world implementation and letting real live users test it, House Grow Health allows you to launch your product with the confidence it has what it takes to succeed." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_grow" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__grow="_event: mouseenter; visible:false; opacity:0;    _target: #intro_grow;"
+               event-set__btn_grow="_event: mouseenter; visible:false; opacity:0;  _target: #btn_grow;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION GROW —————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_grow"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_grow" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0  0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+    
+                                               <!-- —————————————————— INTRO INMARSAT —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Finmarsat.patt?1504541215916">
+      
+       <a-entity id="intro_inmarsat"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="We ensure you''re never beyond reach\n\n House Inmarsat is considered to be the industry leader and pioneer in mobile satellite communications, existing and powering global connectivity for nearly four decades." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_inmarsat" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__inmarsat="_event: mouseenter; visible:false; opacity:0;    _target: #intro_inmarsat;"
+               event-set__btn_inmarsat="_event: mouseenter; visible:false; opacity:0;  _target: #btn_inmarsat;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION INMARSAT —————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_inmarsat"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_inmarsat" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+    
+                                               <!-- —————————————————— INTRO MERCEDES —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fmercedes.patt?1504541216217">
+      
+       <a-entity id="intro_mercedes"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="The best or nothing\n\nThis House promises to deliver the best product possible through everything they do.\n It vows to be the best in every aspect of its vehicles, which includes innovation, performance, design, safety, and environment." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_mercedes" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__mercedes="_event: mouseenter; visible:false; opacity:0;    _target: #intro_mercedes;"
+               event-set__btn_mercedes="_event: mouseenter; visible:false; opacity:0;  _target: #btn_mercedes;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION MERCEDES —————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_mercedes"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_mercedes" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+    
+                                               <!-- —————————————————— INTRO MICROSOFT —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fmicrosoft.patt?1504541216560">
+      
+       <a-entity id="intro_microsoft"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Empowering us all\n\nHouse Microsoft has always been committted to helping others realize their potential by creating the best products possible based on core values of innovation, social responsibility, environment, philantropy and trustworthy computing." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_microsoft" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__microsoft="_event: mouseenter; visible:false; opacity:0;    _target: #intro_microsoft;"
+               event-set__btn_microsoft="_event: mouseenter; visible:false; opacity:0;  _target: #btn_microsoft;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION MICROSOFT —————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_microsoft"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_microsoft" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+    
+                                               <!-- —————————————————— INTRO NOS —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fnos.patt?1504536310990">
+      
+       <a-entity id="intro_nos"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="There's more to nos\n\nHouse NOS has been growing since day one, having products in several areas, from mobile phones to music festivals.\n
+By creating revolutionary products in the telecommunication markets, they're the best communication and entertainment group in Portugal, and they won't stop there." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_nos" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__nos="_event: mouseenter; visible:false; opacity:0;    _target: #intro_nos;"
+               event-set__btn_nos="_event: mouseenter; visible:false; opacity:0;  _target: #btn_nos;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION NOS —————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_nos"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_nos" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+    
+                                               <!-- —————————————————— INTRO PIPEDRIVE —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fpipe_alternative.patt?1504795286998">
+      
+       <a-entity id="intro_pipedrive"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Online sales CRM\n\nHouse Pipedrive helps salespeople focus on actions that close deals because their products' purpose is to aid small teams in managing long and complex sales processes." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_pipedrive" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__pipedrive="_event: mouseenter; visible:false; opacity:0;    _target: #intro_pipedrive;"
+               event-set__btn_pipedrive="_event: mouseenter; visible:false; opacity:0;  _target: #btn_pipedrive;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION PIPEDRIVE —————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_pipedrive"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_pipedrive" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+    
+                                               <!-- —————————————————— INTRO PROBE.LY —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Falternativa_probely?1504616929472">
+      
+       <a-entity id="intro_probe"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Vulnerability scanning suite for agile teams\n\nHouse Probe.ly helps protect your company and product by providing tailored instructions on how to fix the vulnerabilities in your application. \nBy using its API, you can integrate their product into the development processes and continuous integration tools in order to automatize security testing." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_probe" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__probe="_event: mouseenter; visible:false; opacity:0;    _target: #intro_probe;"
+               event-set__btn_probe="_event: mouseenter; visible:false; opacity:0;  _target: #btn_probe;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION PROBE.LY —————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_probe"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_probe" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+    
+    
+                                               <!-- —————————————————— INTRO SIEMENS —————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fsiemens.patt?1504536311878">
+      
+       <a-entity id="intro_siemens"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:2;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Ingenuity for life\n\n House Siemens has been in Portugal for over 112 years, having built several worldwide competence centers in areas like energy, infrastructures, shared services, and many more.\n
+Always aiming to continue the ideals of their founder, this house is proud to promote the link between Science and Technology." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_siemens" position="0 -0.7 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__siemens="_event: mouseenter; visible:false; opacity:0;    _target: #intro_siemens;"
+               event-set__btn_siemens="_event: mouseenter; visible:false; opacity:0;  _target: #btn_siemens;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION SIEMENS—————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_siemens"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_siemens" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+    
+    
+    
+    
+    
+                                               <!-- —————————————————— INTRO SONAE—————————————————— --> 
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fs_sonae.patt?1504606395994">
+      
+       <a-entity id="intro_sonae"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:1;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Improving life\n\n
+
+House SONAE is a multinational that owns several companies in the most diversified sectors.\n It is also a learning organization with a clear focus on continuous learning and improvement. As the years go by, that has been their posture and a key factor to their success.\n
+With strong values like curiosity, boldness, common sense, creativity and excellence, house SONAE brings the best possible product to all their costumers." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    
+     <a-plane id="btn_sonae" position="0 -0.9 0.05"   material="color:black"  geometry="width:3; height:0.35;"
+               event-set__sonae="_event: mouseenter; visible:false; opacity:0;    _target: #intro_sonae;"
+               event-set__btn_sonae="_event: mouseenter; visible:false; opacity:0;  _target: #btn_sonae;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Next"  align="center"></a-text>
+          
+        </a-plane>
+    
+                                               <!-- —————————————————— QUESTION SONAE —————————————————— --> 
+    
+    
+    
+    <a-entity id="pergunta_sonae"
+                look-at="#marker"
+                geometry="primitive: plane; width:3; height:2.5;"
+                material="color:red"
+                rotation="0 0 0"
+                position="0 0 0"
+                visible="false">
+        
+         <a-text scale="0.4 0.4 0.4" id="texto_sonae" visible="false" font="sourcecodepro" value=" question XYZ" position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+    </a-marker>
+     
+    <!-- add a simple camera -->
+    <a-entity camera id="cam">
+     <a-cursor fuse="false" color="yellow">
+         
+       </a-cursor>
+    
+    </a-entity>
+  
+    </a-scene>
+    
+  
+     <script src="augmented_reality.js"></script> 
+</body>
+  
+</html>
