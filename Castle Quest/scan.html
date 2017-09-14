@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/ec578832d908e3b33bb1da9c649543e151395c21/aframe/build/aframe-ar.min.js"></script>
+<script>THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>
+    
+     <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script>
+    
+ 
+    <link rel="stylesheet" type="text/css" href="flexboxgrid.min.css">
+    <!--   Importing Flexbox Grid  -->
+    
+     <link rel="stylesheet" type="text/css" href="style.css">
+    <!--   Importing css  -->
+    
+ 
+   
+    <link rel="shortcut icon"
+      type="image/png" 
+      href="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fcastle_c.png?1504708306759">
+    
+  </head>
+  <body>
+
+          
+      <input type="checkbox" id="nav-trigger" class="nav-controller"/>
+    <header class="header-bar">
+        <label class="" for="nav-trigger"  tabindex="-1">
+            <div class="button--icon-container">
+                <span class="scan--icon scan--icon--hamburger"></span>
+            </div>
+        </label>
+      
+    </header>
+    
+    <aside class="nav  center-xs">
+        <label class="overlay " for="nav-trigger"></label>  
+        <div class="nav__body ">
+            <div class="nav__header">
+                <a class=" text" href="index.html">  <img class="col-xs-10 col-md-12 castle_icon"  alt="Castle" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fcastle_menu.svg?1505211753382"> </a>
+            </div>
+
+            <ul class="nav__list">
+              
+                 <li class="nav__item" for="nav-trigger">
+                    <a class="nav__link text" href="howto.html">Gameplay </a>
+                </li>
+                
+                   <li class="nav__item " for="nav-trigger">
+                     <a class="nav__link nav_highlight text" href="scan.html">Scanner</a>
+                </li>
+                
+                   <li class="nav__item" for="nav-trigger">
+                    <a class="nav__link text" href="prizes.html">Prizes </a>
+                </li>
+                
+                  <li class="nav__item" for="nav-trigger">
+                    <a class="nav__link text" href="castles.html">Castles </a>
+                </li>
+              
+               <li class="nav__item  row " for="nav-trigger">
+       <p class=" u__lowOpacity col-xs-12 center-xs nav__footer" >Made with &hearts; by <a  target="blank" href="www.whitesmith.co">Whitesmith </a> </p> 
+        </li>
+            </ul>
+        </div>
+     
+    </aside>  
+    
+ <a-scene embedded artoolkit="sourceType: webcam;">
+    
+    
+                                              
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbard.patt?1504617361228">
+      
+       <a-entity id="intro_bard"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:1;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Congratulations Conqueror.\n Welcome to Castle Bard.\n Get ready for learning the best songs, legends, and tales from all the bards of Westeros." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+      
+      
+        <a-plane id="btn_bard" position="0 -0.7 0"   material="color:black"  geometry="width:3; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Collect Badge"  align="center"></a-text>
+          
+        </a-plane>
+    
+    </a-marker>
+    
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Ffeast.patt?1504617361409">
+      
+       <a-entity id="intro_feast"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:1;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Congratulations Conqueror.\n You have now reached Castle Feast! \n As the new lord of this marvelous lands and mighty castle, you have the privilege to reap and eat it's fresh and delicious crops." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+      
+      
+        <a-plane id="btn_feast" position="0 -0.7 0"   material="color:black"  geometry="width:3; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Collect Badge"  align="center"></a-text>
+          
+        </a-plane>
+    
+    </a-marker>
+    
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Flabor.patt?1504617361549">
+      
+       <a-entity id="intro_labor"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:1;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Congratulations Conqueror.\n You have conquered Castle Labor!\n Here you'll find the best armies and most loyal and honest people to accompany you on your future adventures." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+      
+        <a-plane id="btn_labor" position="0 -0.7 0"   material="color:black"  geometry="width:3; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Collect Badge"  align="center"></a-text>
+          
+        </a-plane>
+    
+    </a-marker>
+    
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbright.patt?1504617361594">
+      
+       <a-entity id="intro_bright"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:1;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Congratulations Conqueror.\n Welcome to Castle Bright \n Besides the wonderful view, here you'll find the wisest maesters with a vast range of knowledge about the world and its wonders." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+      
+        <a-plane id="btn_bright" position="0 -0.7 0"   material="color:black"  geometry="width:3; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Collect Badge"  align="center"></a-text>
+          
+        </a-plane>
+    
+    </a-marker>
+    
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fno_one.patt?1504617361952">
+      
+       <a-entity id="intro_noone"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:1;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Congratulations Conqueror.\n Castle No one is now yours! \n Bathe in the knowledge and training the faceless men have to offer you.\n
+With their help, you can surely become the greatest Conqueror of all Westeros." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+      
+        <a-plane id="btn_noone" position="0 -0.7 0"   material="color:black"  geometry="width:3; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Collect Badge"  align="center"></a-text>
+          
+        </a-plane>
+    
+    </a-marker>
+    
+    
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fminerva.patt?1504617361666">
+      
+       <a-entity id="intro_minerva"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:1;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Congratulations Conqueror.\n You are now sole owner of Castle Minerva! \n Here reside a lot of wise elders that gather from time to time to share their life-long wisdom.\n
+Enjoy!" position="0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+      
+        <a-plane id="btn_minerva" position="0 -0.7 0"   material="color:black"  geometry="width:3; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Collect Badge"  align="center"></a-text>
+          
+        </a-plane>
+    
+    </a-marker>
+    
+     
+    <a-marker type="pattern" size="1" url="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fwaterfall.patt?1504617362273">
+      
+       <a-entity id="intro_waterfall"
+                look-at="#marker"
+                 material="color:black"
+                geometry="primitive: plane; width:3; height:1;"
+                rotation="0 0 0"
+                position="0 0 0">
+        
+         <a-text scale="0.4 0.4 0.4" font="sourcecodepro" value="Congratulations Conqueror.\n You now own Castle Waterfall!\n With a variety of beautiful and large waterfalls and lakes, bathe and refresh yourself as you please." position="0 0 0.05" align="center"></a-text>
+        
+      </a-entity> 
+      
+        <a-plane id="btn_waterfall" position="0 -0.7 0"   material="color:black"  geometry="width:3; height:0.35;">
+          
+          <a-text scale="0.4 0.4 0.4" position="0 0 0" value="Collect Badge"  align="center"></a-text>
+          
+        </a-plane>
+    
+    </a-marker>
+    
+    
+     
+    <!-- add a simple camera -->
+    <a-entity camera id="cam">
+     <a-cursor fuse="true" color="yellow">
+         
+       </a-cursor>
+    
+    </a-entity>
+  
+
+
+</a-scene>
+   
+      <script src=" augmented_reality.js"></script>
+    
+    </body>
+  
+</html>
