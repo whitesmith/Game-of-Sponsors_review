@@ -41,7 +41,6 @@ answer_ws.onclick = function () {
     question_wsW.setAttribute('visible', 'true');
     txt_wsW.setAttribute('visible', 'true');
     btn_wsW.setAttribute('visible', 'true');
-
 }
 
 
@@ -57,7 +56,6 @@ answer2_ws.onclick = function () {
     question_wsW.setAttribute('visible', 'true');
     txt_wsW.setAttribute('visible', 'true');
     btn_wsW.setAttribute('visible', 'true');
-
 }
 
 var question_wsR = document.querySelector("#pergunta_wsR");
@@ -78,9 +76,7 @@ answerr_ws.onclick = function () {
     question_wsR.setAttribute('visible', 'true');
     txt_wsR.setAttribute('visible', 'true');
     btn_wsR.setAttribute('visible', 'true');
-
 }
-
 
 var ws_url = "";
 var index_url = "https://gos.glitch.me/";
@@ -93,7 +89,6 @@ function Badge_WS() {
     }
 }
 
-
 function Leave_WS() {
 
     btn_wsW.onclick = function () {
@@ -102,9 +97,8 @@ function Leave_WS() {
     }
 }
 
+
 //———————————————————————BETA-I
-
-
 
 var btn_beta = document.querySelector("#btn_beta");
 var intro_beta = document.querySelector("#intro_beta");
@@ -147,9 +141,7 @@ answer_beta.onclick = function () {
     question_betaW.setAttribute('visible', 'true');
     txt_betaW.setAttribute('visible', 'true');
     btn_betaW.setAttribute('visible', 'true');
-
 }
-
 
 answer2_beta.onclick = function () {
 
@@ -163,7 +155,6 @@ answer2_beta.onclick = function () {
     question_betaW.setAttribute('visible', 'true');
     txt_betaW.setAttribute('visible', 'true');
     btn_betaW.setAttribute('visible', 'true');
-
 }
 
 var question_betaR = document.querySelector("#pergunta_betaR");
@@ -179,14 +170,10 @@ answerr_beta.onclick = function () {
     question_beta.setAttribute('visible', 'false');
     txt_beta.setAttribute('visible', 'false');
 
-
-
     question_betaR.setAttribute('visible', 'true');
     txt_betaR.setAttribute('visible', 'true');
     btn_betaR.setAttribute('visible', 'true');
-
 }
-
 
 var beta_url = "";
 var index_url = "https://gos.glitch.me/";
@@ -199,7 +186,6 @@ function Badge_beta() {
     }
 }
 
-
 function Leave_beta() {
 
     btn_betaW.onclick = function () {
@@ -208,10 +194,7 @@ function Leave_beta() {
     }
 }
 
-
 //———————————————————————BRIGHT
-
-
 
 var btn_bright = document.querySelector("#btn_bright");
 var intro_bright = document.querySelector("#intro_bright");
@@ -291,9 +274,7 @@ answerr_bright.onclick = function () {
     question_brightR.setAttribute('visible', 'true');
     txt_brightR.setAttribute('visible', 'true');
     btn_brightR.setAttribute('visible', 'true');
-
 }
-
 
 var bright_url = "";
 var index_url = "https://gos.glitch.me/";
@@ -315,12 +296,7 @@ function Leave_bright() {
     }
 }
 
-
-
 //———————————————————————CIGALA 
-
-
-
 
 var btn_cigala = document.querySelector("#btn_cigala");
 var intro_cigala = document.querySelector("#intro_cigala");
@@ -363,9 +339,7 @@ answer_cigala.onclick = function () {
     question_cigalaW.setAttribute('visible', 'true');
     txt_cigalaW.setAttribute('visible', 'true');
     btn_cigalaW.setAttribute('visible', 'true');
-
 }
-
 
 answer2_cigala.onclick = function () {
 
@@ -379,7 +353,6 @@ answer2_cigala.onclick = function () {
     question_cigalaW.setAttribute('visible', 'true');
     txt_cigalaW.setAttribute('visible', 'true');
     btn_cigalaW.setAttribute('visible', 'true');
-
 }
 
 var question_cigalaR = document.querySelector("#pergunta_cigalaR");
@@ -395,12 +368,9 @@ answerr_cigala.onclick = function () {
     question_cigala.setAttribute('visible', 'false');
     txt_cigala.setAttribute('visible', 'false');
 
-
-
     question_cigalaR.setAttribute('visible', 'true');
     txt_cigalaR.setAttribute('visible', 'true');
     btn_cigalaR.setAttribute('visible', 'true');
-
 }
 
 
@@ -415,7 +385,6 @@ function Badge_cigala() {
     }
 }
 
-
 function Leave_cigala() {
 
     btn_cigalaW.onclick = function () {
@@ -424,12 +393,7 @@ function Leave_cigala() {
     }
 }
 
-
-
 //———————————————————————DATA
-
-
-
 
 var btn_datap = document.querySelector("#btn_datap");
 var intro_datap = document.querySelector("#intro_datap");
@@ -472,9 +436,7 @@ answer_datap.onclick = function () {
     question_datapW.setAttribute('visible', 'true');
     txt_datapW.setAttribute('visible', 'true');
     btn_datapW.setAttribute('visible', 'true');
-
 }
-
 
 answer2_datap.onclick = function () {
 
@@ -488,7 +450,6 @@ answer2_datap.onclick = function () {
     question_datapW.setAttribute('visible', 'true');
     txt_datapW.setAttribute('visible', 'true');
     btn_datapW.setAttribute('visible', 'true');
-
 }
 
 var question_datapR = document.querySelector("#pergunta_datapR");
@@ -504,12 +465,9 @@ answerr_datap.onclick = function () {
     question_datap.setAttribute('visible', 'false');
     txt_datap.setAttribute('visible', 'false');
 
-
-
     question_datapR.setAttribute('visible', 'true');
     txt_datapR.setAttribute('visible', 'true');
     btn_datapR.setAttribute('visible', 'true');
-
 }
 
 
@@ -533,12 +491,7 @@ function Leave_datap() {
     }
 }
 
-
-
 //———————————————————————EAT
-
-
-
 
 var btn_eat = document.querySelector("#btn_eat");
 var intro_eat = document.querySelector("#intro_eat");
@@ -581,9 +534,7 @@ answer_eat.onclick = function () {
     question_eatW.setAttribute('visible', 'true');
     txt_eatW.setAttribute('visible', 'true');
     btn_eatW.setAttribute('visible', 'true');
-
 }
-
 
 answer2_eat.onclick = function () {
 
@@ -597,7 +548,6 @@ answer2_eat.onclick = function () {
     question_eatW.setAttribute('visible', 'true');
     txt_eatW.setAttribute('visible', 'true');
     btn_eatW.setAttribute('visible', 'true');
-
 }
 
 var question_eatR = document.querySelector("#pergunta_eatR");
@@ -613,12 +563,9 @@ answerr_eat.onclick = function () {
     question_eat.setAttribute('visible', 'false');
     txt_eat.setAttribute('visible', 'false');
 
-
-
     question_eatR.setAttribute('visible', 'true');
     txt_eatR.setAttribute('visible', 'true');
     btn_eatR.setAttribute('visible', 'true');
-
 }
 
 
@@ -642,13 +589,7 @@ function Leave_eat() {
     }
 }
 
-
-
-
 //———————————————————————FEEDZAI
-
-
-
 
 var btn_feedzai = document.querySelector("#btn_feedzai");
 var intro_feedzai = document.querySelector("#intro_feedzai");
@@ -694,7 +635,6 @@ answer_feedzai.onclick = function () {
 
 }
 
-
 answer2_feedzai.onclick = function () {
 
     answer_feedzai.setAttribute('visible', 'false');
@@ -707,7 +647,6 @@ answer2_feedzai.onclick = function () {
     question_feedzaiW.setAttribute('visible', 'true');
     txt_feedzaiW.setAttribute('visible', 'true');
     btn_feedzaiW.setAttribute('visible', 'true');
-
 }
 
 var question_feedzaiR = document.querySelector("#pergunta_feedzaiR");
@@ -728,9 +667,7 @@ answerr_feedzai.onclick = function () {
     question_feedzaiR.setAttribute('visible', 'true');
     txt_feedzaiR.setAttribute('visible', 'true');
     btn_feedzaiR.setAttribute('visible', 'true');
-
 }
-
 
 var feedzai_url = "";
 var index_url = "https://gos.glitch.me/";
@@ -743,7 +680,6 @@ function Badge_feedzai() {
     }
 }
 
-
 function Leave_feedzai() {
 
     btn_feedzaiW.onclick = function () {
@@ -752,10 +688,7 @@ function Leave_feedzai() {
     }
 }
 
-
 //———————————————————————GALP
-
-
 
 var btn_galp = document.querySelector("#btn_galp");
 var intro_galp = document.querySelector("#intro_galp");
@@ -798,7 +731,6 @@ answer_galp.onclick = function () {
     question_galpW.setAttribute('visible', 'true');
     txt_galpW.setAttribute('visible', 'true');
     btn_galpW.setAttribute('visible', 'true');
-
 }
 
 
@@ -814,7 +746,6 @@ answer2_galp.onclick = function () {
     question_galpW.setAttribute('visible', 'true');
     txt_galpW.setAttribute('visible', 'true');
     btn_galpW.setAttribute('visible', 'true');
-
 }
 
 var question_galpR = document.querySelector("#pergunta_galpR");
@@ -830,12 +761,9 @@ answerr_galp.onclick = function () {
     question_galp.setAttribute('visible', 'false');
     txt_galp.setAttribute('visible', 'false');
 
-
-
     question_galpR.setAttribute('visible', 'true');
     txt_galpR.setAttribute('visible', 'true');
     btn_galpR.setAttribute('visible', 'true');
-
 }
 
 
@@ -850,7 +778,6 @@ function Badge_galp() {
     }
 }
 
-
 function Leave_galp() {
 
     btn_galpW.onclick = function () {
@@ -859,10 +786,7 @@ function Leave_galp() {
     }
 }
 
-
 //———————————————————————GROW
-
-
 
 var btn_grow = document.querySelector("#btn_grow");
 var intro_grow = document.querySelector("#intro_grow");
@@ -905,7 +829,6 @@ answer_grow.onclick = function () {
     question_growW.setAttribute('visible', 'true');
     txt_growW.setAttribute('visible', 'true');
     btn_growW.setAttribute('visible', 'true');
-
 }
 
 
@@ -921,7 +844,6 @@ answer2_grow.onclick = function () {
     question_growW.setAttribute('visible', 'true');
     txt_growW.setAttribute('visible', 'true');
     btn_growW.setAttribute('visible', 'true');
-
 }
 
 var question_growR = document.querySelector("#pergunta_growR");
@@ -937,12 +859,9 @@ answerr_grow.onclick = function () {
     question_grow.setAttribute('visible', 'false');
     txt_grow.setAttribute('visible', 'false');
 
-
-
     question_growR.setAttribute('visible', 'true');
     txt_growR.setAttribute('visible', 'true');
     btn_growR.setAttribute('visible', 'true');
-
 }
 
 
@@ -967,9 +886,6 @@ function Leave_grow() {
 }
 
 //———————————————————————INMARSAT
-
-
-
 
 var btn_inmarsat = document.querySelector("#btn_inmarsat");
 var intro_inmarsat = document.querySelector("#intro_inmarsat");
@@ -1012,7 +928,6 @@ answer_inmarsat.onclick = function () {
     question_inmarsatW.setAttribute('visible', 'true');
     txt_inmarsatW.setAttribute('visible', 'true');
     btn_inmarsatW.setAttribute('visible', 'true');
-
 }
 
 
@@ -1028,7 +943,6 @@ answer2_inmarsat.onclick = function () {
     question_inmarsatW.setAttribute('visible', 'true');
     txt_inmarsatW.setAttribute('visible', 'true');
     btn_inmarsatW.setAttribute('visible', 'true');
-
 }
 
 var question_inmarsatR = document.querySelector("#pergunta_inmarsatR");
@@ -1049,9 +963,7 @@ answerr_inmarsat.onclick = function () {
     question_inmarsatR.setAttribute('visible', 'true');
     txt_inmarsatR.setAttribute('visible', 'true');
     btn_inmarsatR.setAttribute('visible', 'true');
-
 }
-
 
 var inmarsat_url = "";
 var index_url = "https://gos.glitch.me/";
@@ -1073,12 +985,7 @@ function Leave_inmarsat() {
     }
 }
 
-
-
 //———————————————————————MERCEDES
-
-
-
 
 var btn_mercedes = document.querySelector("#btn_mercedes");
 var intro_mercedes = document.querySelector("#intro_mercedes");
@@ -1121,9 +1028,7 @@ answer_mercedes.onclick = function () {
     question_mercedesW.setAttribute('visible', 'true');
     txt_mercedesW.setAttribute('visible', 'true');
     btn_mercedesW.setAttribute('visible', 'true');
-
 }
-
 
 answer2_mercedes.onclick = function () {
 
@@ -1137,7 +1042,6 @@ answer2_mercedes.onclick = function () {
     question_mercedesW.setAttribute('visible', 'true');
     txt_mercedesW.setAttribute('visible', 'true');
     btn_mercedesW.setAttribute('visible', 'true');
-
 }
 
 var question_mercedesR = document.querySelector("#pergunta_mercedesR");
@@ -1153,12 +1057,9 @@ answerr_mercedes.onclick = function () {
     question_mercedes.setAttribute('visible', 'false');
     txt_mercedes.setAttribute('visible', 'false');
 
-
-
     question_mercedesR.setAttribute('visible', 'true');
     txt_mercedesR.setAttribute('visible', 'true');
     btn_mercedesR.setAttribute('visible', 'true');
-
 }
 
 
@@ -1182,11 +1083,7 @@ function Leave_mercedes() {
     }
 }
 
-
 //———————————————————————MICROSOFT
-
-
-
 
 var btn_microsoft = document.querySelector("#btn_microsoft");
 var intro_microsoft = document.querySelector("#intro_microsoft");
@@ -1229,9 +1126,7 @@ answer_microsoft.onclick = function () {
     question_microsoftW.setAttribute('visible', 'true');
     txt_microsoftW.setAttribute('visible', 'true');
     btn_microsoftW.setAttribute('visible', 'true');
-
 }
-
 
 answer2_microsoft.onclick = function () {
 
@@ -1245,7 +1140,6 @@ answer2_microsoft.onclick = function () {
     question_microsoftW.setAttribute('visible', 'true');
     txt_microsoftW.setAttribute('visible', 'true');
     btn_microsoftW.setAttribute('visible', 'true');
-
 }
 
 var question_microsoftR = document.querySelector("#pergunta_microsoftR");
@@ -1261,14 +1155,10 @@ answerr_microsoft.onclick = function () {
     question_microsoft.setAttribute('visible', 'false');
     txt_microsoft.setAttribute('visible', 'false');
 
-
-
     question_microsoftR.setAttribute('visible', 'true');
     txt_microsoftR.setAttribute('visible', 'true');
     btn_microsoftR.setAttribute('visible', 'true');
-
 }
-
 
 var microsoft_url = "";
 var index_url = "https://gos.glitch.me/";
@@ -1281,7 +1171,6 @@ function Badge_microsoft() {
     }
 }
 
-
 function Leave_microsoft() {
 
     btn_microsoftW.onclick = function () {
@@ -1290,12 +1179,7 @@ function Leave_microsoft() {
     }
 }
 
-
 //———————————————————————NOS
-
-
-
-
 var btn_nos = document.querySelector("#btn_nos");
 var intro_nos = document.querySelector("#intro_nos");
 var question_nos = document.querySelector("#pergunta_nos");
@@ -1337,9 +1221,7 @@ answer_nos.onclick = function () {
     question_nosW.setAttribute('visible', 'true');
     txt_nosW.setAttribute('visible', 'true');
     btn_nosW.setAttribute('visible', 'true');
-
 }
-
 
 answer2_nos.onclick = function () {
 
@@ -1353,7 +1235,6 @@ answer2_nos.onclick = function () {
     question_nosW.setAttribute('visible', 'true');
     txt_nosW.setAttribute('visible', 'true');
     btn_nosW.setAttribute('visible', 'true');
-
 }
 
 var question_nosR = document.querySelector("#pergunta_nosR");
@@ -1369,12 +1250,9 @@ answerr_nos.onclick = function () {
     question_nos.setAttribute('visible', 'false');
     txt_nos.setAttribute('visible', 'false');
 
-
-
     question_nosR.setAttribute('visible', 'true');
     txt_nosR.setAttribute('visible', 'true');
     btn_nosR.setAttribute('visible', 'true');
-
 }
 
 
@@ -1398,12 +1276,7 @@ function Leave_nos() {
     }
 }
 
-
-
 //———————————————————————PIPEDRIVE
-
-
-
 
 var btn_pipedrive = document.querySelector("#btn_pipedrive");
 var intro_pipedrive = document.querySelector("#intro_pipedrive");
@@ -1446,7 +1319,6 @@ answer_pipedrive.onclick = function () {
     question_pipedriveW.setAttribute('visible', 'true');
     txt_pipedriveW.setAttribute('visible', 'true');
     btn_pipedriveW.setAttribute('visible', 'true');
-
 }
 
 
@@ -1462,7 +1334,6 @@ answer2_pipedrive.onclick = function () {
     question_pipedriveW.setAttribute('visible', 'true');
     txt_pipedriveW.setAttribute('visible', 'true');
     btn_pipedriveW.setAttribute('visible', 'true');
-
 }
 
 var question_pipedriveR = document.querySelector("#pergunta_pipedriveR");
@@ -1478,12 +1349,9 @@ answerr_pipedrive.onclick = function () {
     question_pipedrive.setAttribute('visible', 'false');
     txt_pipedrive.setAttribute('visible', 'false');
 
-
-
     question_pipedriveR.setAttribute('visible', 'true');
     txt_pipedriveR.setAttribute('visible', 'true');
     btn_pipedriveR.setAttribute('visible', 'true');
-
 }
 
 
@@ -1507,12 +1375,7 @@ function Leave_pipedrive() {
     }
 }
 
-
-
 //———————————————————————PROBE.LY
-
-
-
 
 var btn_probe = document.querySelector("#btn_probe");
 var intro_probe = document.querySelector("#intro_probe");
@@ -1558,7 +1421,6 @@ answer_probe.onclick = function () {
 
 }
 
-
 answer2_probe.onclick = function () {
 
     answer_probe.setAttribute('visible', 'false');
@@ -1571,7 +1433,6 @@ answer2_probe.onclick = function () {
     question_probeW.setAttribute('visible', 'true');
     txt_probeW.setAttribute('visible', 'true');
     btn_probeW.setAttribute('visible', 'true');
-
 }
 
 var question_probeR = document.querySelector("#pergunta_probeR");
@@ -1592,9 +1453,7 @@ answerr_probe.onclick = function () {
     question_probeR.setAttribute('visible', 'true');
     txt_probeR.setAttribute('visible', 'true');
     btn_probeR.setAttribute('visible', 'true');
-
 }
-
 
 var probe_url = "";
 var index_url = "https://gos.glitch.me/";
@@ -1607,7 +1466,6 @@ function Badge_probe() {
     }
 }
 
-
 function Leave_probe() {
 
     btn_probeW.onclick = function () {
@@ -1616,11 +1474,7 @@ function Leave_probe() {
     }
 }
 
-
-
 //———————————————————————SIEMENS
-
-
 
 var btn_siemens = document.querySelector("#btn_siemens");
 var intro_siemens = document.querySelector("#intro_siemens");
@@ -1663,9 +1517,7 @@ answer_siemens.onclick = function () {
     question_siemensW.setAttribute('visible', 'true');
     txt_siemensW.setAttribute('visible', 'true');
     btn_siemensW.setAttribute('visible', 'true');
-
 }
-
 
 answer2_siemens.onclick = function () {
 
@@ -1679,7 +1531,6 @@ answer2_siemens.onclick = function () {
     question_siemensW.setAttribute('visible', 'true');
     txt_siemensW.setAttribute('visible', 'true');
     btn_siemensW.setAttribute('visible', 'true');
-
 }
 
 var question_siemensR = document.querySelector("#pergunta_siemensR");
@@ -1695,12 +1546,9 @@ answerr_siemens.onclick = function () {
     question_siemens.setAttribute('visible', 'false');
     txt_siemens.setAttribute('visible', 'false');
 
-
-
     question_siemensR.setAttribute('visible', 'true');
     txt_siemensR.setAttribute('visible', 'true');
     btn_siemensR.setAttribute('visible', 'true');
-
 }
 
 
@@ -1725,12 +1573,7 @@ function Leave_siemens() {
 }
 
 
-
-
 //———————————————————————SONAE
-
-
-
 
 var btn_sonae = document.querySelector("#btn_sonae");
 var intro_sonae = document.querySelector("#intro_sonae");
@@ -1773,7 +1616,6 @@ answer_sonae.onclick = function () {
     question_sonaeW.setAttribute('visible', 'true');
     txt_sonaeW.setAttribute('visible', 'true');
     btn_sonaeW.setAttribute('visible', 'true');
-
 }
 
 
@@ -1789,7 +1631,6 @@ answer2_sonae.onclick = function () {
     question_sonaeW.setAttribute('visible', 'true');
     txt_sonaeW.setAttribute('visible', 'true');
     btn_sonaeW.setAttribute('visible', 'true');
-
 }
 
 var question_sonaeR = document.querySelector("#pergunta_sonaeR");
@@ -1805,12 +1646,9 @@ answerr_sonae.onclick = function () {
     question_sonae.setAttribute('visible', 'false');
     txt_sonae.setAttribute('visible', 'false');
 
-
-
     question_sonaeR.setAttribute('visible', 'true');
     txt_sonaeR.setAttribute('visible', 'true');
     btn_sonaeR.setAttribute('visible', 'true');
-
 }
 
 
