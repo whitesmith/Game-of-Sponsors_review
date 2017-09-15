@@ -1,99 +1,91 @@
 //———————————————————————WS
 
-/*   var btn_ws= document.querySelector("#btn_ws");
-    var intro_ws= document.querySelector("#intro_ws");
-    var question_ws= document.querySelector("#pergunta_ws");
-    var txt_ws= document.querySelector("#texto_ws");
+var btn_ws = document.querySelector("#btn_ws");
+var intro_ws = document.querySelector("#intro_ws");
+var question_ws = document.querySelector("#pergunta_ws");
+var txt_ws = document.querySelector("#texto_ws");
 
+var answer_ws = document.querySelector("#answer_ws");
+var answer2_ws = document.querySelector("#answer2_ws");
+var answerr_ws = document.querySelector("#answerr_ws");
 
-var answer_ws=document.querySelector("#answer_ws");
-var answer2_ws=document.querySelector("#answer2_ws");
-var answerr_ws=document.querySelector("#answerr_ws");
-      
-       function Show_ws(){
-        
-       btn_ws.onclick = function() {
-           
-          btn_ws.setAttribute('visible','false');
-          intro_ws.setAttribute('visible','false');
-      
-          question_ws.setAttribute('visible','true');
-          txt_ws.setAttribute('visible','true');
-         
-          answer_ws.setAttribute('visible','true');
-          answer2_ws.setAttribute('visible','true');
-          answerr_ws.setAttribute('visible','true');
-        
-                                                         } }
+function Show_ws() {
 
+    btn_ws.onclick = function () {
 
+        btn_ws.setAttribute('visible', 'false');
+        intro_ws.setAttribute('visible', 'false');
 
+        question_ws.setAttribute('visible', 'true');
+        txt_ws.setAttribute('visible', 'true');
 
- var question_wsW= document.querySelector("#pergunta_wsW");
- var txt_wsW= document.querySelector("#texto_wsW");
- var btn_leave= document.querySelector(".btn_leave");
+        answer_ws.setAttribute('visible', 'true');
+        answer2_ws.setAttribute('visible', 'true');
+        answerr_ws.setAttribute('visible', 'true');
+    }
+}
 
- answer_ws.onclick = function() {
-           
-          answer_ws.setAttribute('visible','false');
-          answer2_ws.setAttribute('visible','false');
-          answerr_ws.setAttribute('visible','false');
-   
-          question_ws.setAttribute('visible','false');
-          txt_ws.setAttribute('visible','false');
-   
-          question_wsW.setAttribute('visible','true');
-          txt_wsW.setAttribute('visible','true');
-          btn_leave.setAttribute('visible','true');
+var question_wsW = document.querySelector("#pergunta_wsW");
+var txt_wsW = document.querySelector("#texto_wsW");
+var btn_leave = document.querySelector(".btn_leave");
 
- }
- 
- 
- answer2_ws.onclick = function() {
-           
-          answer_ws.setAttribute('visible','false');
-          answer2_ws.setAttribute('visible','false');
-          answerr_ws.setAttribute('visible','false');
-   
-          question_ws.setAttribute('visible','false');
-          txt_ws.setAttribute('visible','false');
-   
-          question_wsW.setAttribute('visible','true');
-          txt_wsW.setAttribute('visible','true');
-          btn_leave.setAttribute('visible','true');
+answer_ws.onclick = function () {
 
- }
- 
- var question_wsR= document.querySelector("#pergunta_wsR");
- var txt_wsR= document.querySelector("#texto_wsR");
- var btn_wsR= document.querySelector("#btn_wsR");
- 
- answerr_ws.onclick = function() {
-           
-          answer_ws.setAttribute('visible','false');
-          answer2_ws.setAttribute('visible','false');
-          answerr_ws.setAttribute('visible','false');
-   
-          question_ws.setAttribute('visible','false');
-          txt_ws.setAttribute('visible','false');
-   
-   
-   
-          question_wsR.setAttribute('visible','true');
-          txt_wsR.setAttribute('visible','true');
-          btn_wsR.setAttribute('visible','true');
+    answer_ws.setAttribute('visible', 'false');
+    answer2_ws.setAttribute('visible', 'false');
+    answerr_ws.setAttribute('visible', 'false');
 
- }
- 
- 
- var ws_url= "";
- var index_url= "https://gos.glitch.me/";
+    question_ws.setAttribute('visible', 'false');
+    txt_ws.setAttribute('visible', 'false');
 
-function Badge_ws(){
-        
-btn_wsR.onclick = function() {
-           
- window.location = ws_url; } }*/
+    question_wsW.setAttribute('visible', 'true');
+    txt_wsW.setAttribute('visible', 'true');
+    btn_leave.setAttribute('visible', 'true');
+}
+
+answer2_ws.onclick = function () {
+
+    answer_ws.setAttribute('visible', 'false');
+    answer2_ws.setAttribute('visible', 'false');
+    answerr_ws.setAttribute('visible', 'false');
+
+    question_ws.setAttribute('visible', 'false');
+    txt_ws.setAttribute('visible', 'false');
+
+    question_wsW.setAttribute('visible', 'true');
+    txt_wsW.setAttribute('visible', 'true');
+    btn_leave.setAttribute('visible', 'true');
+
+}
+
+var question_wsR = document.querySelector("#pergunta_wsR");
+var txt_wsR = document.querySelector("#texto_wsR");
+var btn_wsR = document.querySelector("#btn_wsR");
+
+answerr_ws.onclick = function () {
+
+    answer_ws.setAttribute('visible', 'false');
+    answer2_ws.setAttribute('visible', 'false');
+    answerr_ws.setAttribute('visible', 'false');
+
+    question_ws.setAttribute('visible', 'false');
+    txt_ws.setAttribute('visible', 'false');
+
+    question_wsR.setAttribute('visible', 'true');
+    txt_wsR.setAttribute('visible', 'true');
+    btn_wsR.setAttribute('visible', 'true');
+}
+
+var ws_url = "";
+var index_url = "https://gos.glitch.me/";
+
+function Badge_ws() {
+
+    btn_wsR.onclick = function () {
+
+        window.location = ws_url;
+    }
+}
 
 var btn_leave = document.querySelector(".btn_leave");
 
@@ -104,10 +96,6 @@ function Leave_() {
         window.location = index_url;
     }
 }
-
-
-
-
 
 //———————————————————————AWS
 
@@ -152,7 +140,6 @@ answer_aws.onclick = function () {
     question_awsW.setAttribute('visible', 'true');
     txt_awsW.setAttribute('visible', 'true');
     btn_awsW.setAttribute('visible', 'true');
-
 }
 
 
@@ -168,7 +155,6 @@ answer2_aws.onclick = function () {
     question_awsW.setAttribute('visible', 'true');
     txt_awsW.setAttribute('visible', 'true');
     btn_awsW.setAttribute('visible', 'true');
-
 }
 
 var question_awsR = document.querySelector("#pergunta_awsR");
@@ -184,14 +170,10 @@ answerr_aws.onclick = function () {
     question_aws.setAttribute('visible', 'false');
     txt_aws.setAttribute('visible', 'false');
 
-
-
     question_awsR.setAttribute('visible', 'true');
     txt_awsR.setAttribute('visible', 'true');
     btn_awsR.setAttribute('visible', 'true');
-
 }
-
 
 var aws_url = "";
 var index_url = "https://gos.glitch.me/";
@@ -204,19 +186,10 @@ function Badge_aws() {
     }
 }
 
-
-
 window.setInterval(function () {
 
     // Show_ws();
     Leave_();
     // Badge_ws();
-
-
     Show_aws();
-    Badge_aws();
-
-
-
-
-}, 100);
+    Badge_aws(); }, 100);
