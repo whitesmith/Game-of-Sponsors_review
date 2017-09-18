@@ -1,7 +1,7 @@
 var sponsors = [
   //"ws",
-  "aws",
-  /*"beta",
+  //"aws",
+"beta",
   "bright",
   "cigala",
   "datap",
@@ -16,13 +16,30 @@ var sponsors = [
   "pipedrive",
   "probe",
   "siemens",
-  "sonae",*/
+  "sonae",
   
   
 ]
 var sponsors_urls = {
 //  "ws": "",
-  "aws": ""
+//  "aws": "",
+"beta": "",
+  "bright": "",
+  "cigala": "",
+  "datap": "",
+  "eat": "",
+  "feedzai": "",
+  "galp": "",
+  "grow": "",
+  "inmarsat": "",
+  "mercedes": "",
+  "microsoft": "",
+  "nos": "",
+  "pipedrive": "",
+  "probe": "",
+  "siemens": "",
+  "sonae": "",
+
 }
 var index_url = "https://gos.glitch.me/";
 
@@ -46,8 +63,9 @@ function show_sponsor(sponsor){
   show_questions(sponsor, 'true')
   show_answers(sponsor, 'true')
 }
-/*
-function on_right_answer(sponsor){
+ 
+
+/*function on_right_answer(sponsor){
   show_answers(sponsor, 'false')
   show_questions(sponsor, 'false')
 
@@ -63,13 +81,13 @@ function on_wrong_answer(sponsor){
   document.querySelector("#pergunta_" + sponsor + "W").setAttribute('visible', 'true');
   document.querySelector("#texto_" + sponsor + "W").setAttribute('visible', 'true');
   document.querySelector(".btn_leave").setAttribute('visible', 'true');
-}
+}*/
 
 function set_events_for_sponsor(sponsor){
   document.querySelector("#btn_" + sponsor).addEventListener('click', function(){
     show_sponsor(sponsor);
   });
-  document.querySelector("#answer_" + sponsor).addEventListener('click', function(){
+ /* document.querySelector("#answer_" + sponsor).addEventListener('click', function(){
     on_wrong_answer(sponsor);
   });
   document.querySelector("#answer2_" + sponsor).addEventListener('click', function(){
@@ -80,18 +98,18 @@ function set_events_for_sponsor(sponsor){
   });
   document.querySelector("#btn_" + sponsor + "R").addEventListener('click', function(){
     window.location = sponsors_urls[sponsor];
-  });
+  });*/
 }
 
 function set_events(){
   for(var i = 0; i < sponsors.length; i++){
     set_events_for_sponsor(sponsors[i])
   }
-  document.querySelector(".btn_leave").addEventListener('click', function(){
+/*  document.querySelector(".btn_leave").addEventListener('click', function(){
     window.location = index_url;
-  });
+  });*/
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     set_events()
-}, false);*/
+}, false); 
