@@ -1,283 +1,166 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Game of Sponsors </title>
     <meta name="description" content="Game of Sponsors">
-    
-    
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-  
-    
-    <link rel="stylesheet" type="text/css" href="flexboxgrid.min.css">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
     <!--   Importing Flexbox Grid  -->
-    
-     <link rel="stylesheet" type="text/css" href="style.css">
-    <!--   Importing Flexbox Grid  -->
-    
+
+    <link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
+    <!--   Importing Main Styles  -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
 
-    <link rel="shortcut icon"
-      type="image/png" 
-      href="https://cdn.glitch.com/8a53e8d1-af21-467f-8691-adaee1250b35%2Ficon_drag.png?1504299616488">
-    
-  </head>
-  <body class=" u__darkGrey outter_box ">
-    
-      
-     
-    <input type="checkbox" id="nav-trigger" class="nav-controller" />
-    <header class="row center-xs section-resized">
-      <div class="col-xs-10 col-sm-12 text-left">
-        <label class="nav-trigger~~display" for="nav-trigger"  tabindex="-1">
-            <div class="button--icon-container">
-                <span class="icon icon--hamburger"></span>
-            </div>
-        </label>
-      </div>
-    </header>
-    
-     <aside class="nav  center-xs">
-        <label class="overlay " for="nav-trigger"></label>  
-        <div class="nav__body ">
-            <div class="nav__header">
-                <a class=" text" href="index.html">  <img class="col-xs-10 col-md-12 dragon_icon"  alt="Ice Dragon" src="https://cdn.glitch.com/8a53e8d1-af21-467f-8691-adaee1250b35%2Fdragon.svg?1504284545840"> </a>
-            </div>
+    <script>
+        $(function () {
+            $("#navbar").load("components/navbar.html");
+        });
+    </script>
+    <!--   Navbar Import -->
 
-            <ul class="nav__list">
-              
-                 <li class="nav__item" for="nav-trigger">
-                    <a class="nav__link text" href="howto.html">Gameplay </a>
-                </li>
-                
-                   <li class="nav__item" for="nav-trigger">
-                     <a class="nav__link text" href="scan.html">Scanner</a>
-                </li>
-                
-                   <li class="nav__item" for="nav-trigger">
-                    <a class="nav__link text nav_highlight" href="prizes.html">Prizes </a>
-                </li>
-                
-                  <li class="nav__item" for="nav-trigger">
-                    <a class="nav__link text" href="houses.html">Houses </a>
-                </li>
-              
-               <li class="nav__item  row " for="nav-trigger">
-       <p class="small_text u__lowOpacity col-xs-12 center-xs nav__footer" >Made with &hearts; by <a  target="blank" href="www.whitesmith.co">Whitesmith </a> </p> 
-        </li>
-            </ul>
+    <link rel="shortcut icon" type="image/png" href="https://cdn.glitch.com/8a53e8d1-af21-467f-8691-adaee1250b35%2Ficon_drag.png?1504299616488">
+</head>
+
+<body class="u-bg-dark">
+
+    <div id="navbar"></div>
+
+    <div class="o-container">
+
+        <div class="row">
+            <div class="center-xs col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+                <h2 class="u-title-has-shadow">Prizes</h2>
+            </div>
         </div>
-     
-    </aside>
-          
-          
-    
-        <div class="row center-xs section-resized">
-          
-        
-         <p class="col-xs-10 col-sm-12 semi_title u__text_lightest ">Prizes <br> <br> </p>
-       
-         <div class="col-xs-6 col-sm-3  center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="Traveler's Badge" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_viajante.svg?1504694427018">
-           
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  Traveler's Badge </p>
-              
-          </div>
-          
-          
-           <div class="col-xs-6 col-sm-3  center-xs">
-            <img class="col-xs-12  sponsor_img"  alt="Traveler's Badge 2" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_viajante2.svg?1504694427227">
-           
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  Traveler's Badge 2</p>
-              
-          </div>
-          
-          
-           <div class="col-xs-6 col-sm-3  center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="Traveler's Badge 3" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_viajante3.svg?1504694427243">
-           
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  Traveler's Badge 3</p>
-              
-          </div>
-          
-          
-           <div class="col-xs-6 col-sm-3  center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="Winner Traveler Badge" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_melhor_viajante.svg?1504694427268">
-          
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  Winner Traveler Badge</p>
-              
-          </div>
-          
-           <div class="col-xs-6 col-sm-3  center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="House AWS" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_aws.svg?1504692038260">
-           
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House AWS</p>
-              
-          </div>
-          
-          
-          <div class="col-xs-6 col-sm-3  center-xs">
-            <img class="col-xs-12  sponsor_img"  alt="House Beta-i" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_beta-i.svg?1504692038619">
-           
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Beta-i</p>
-              
-          </div>
-          
-          
-            <div class="col-xs-6 col-sm-3  center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="House Bright Pixel" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_bright_pixel.svg?1504692038363">
-           
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Bright Pixel</p>
-              
-          </div>
-          
-          
-           <div class="col-xs-6 col-sm-3  center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="House Cigala" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_cigala.svg?1504692038623">
-          
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Cigala</p>
-              
-          </div>
-          
-          
-           <div class="col-xs-6 col-sm-3  center-xs">
-          <img class="col-xs-12  sponsor_img"  alt="House Data Pitch" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_data%20pitch.svg?1504692038443">
-           
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Data Pitch</p>
-              
-          </div>
-          
-          
-           <div class="col-xs-6 col-sm-3  center-xs">
-          <img class="col-xs-12  sponsor_img"  alt="House Feedzai" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_feedzai.svg?1504692039031">
-           
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Feedzai</p>
-              
-          </div>
-          
-          
-           <div class="col-xs-6 col-sm-3  center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="House Galp" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_galp.svg?1504692038449">
-            
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Galp</p>
-              
-          </div>
-          
-          
-             <div class="col-xs-6 col-sm-3  center-xs">
-         <img class="col-xs-12  sponsor_img"  alt="House Eat Tasty" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_eat_tasy.svg?1504692038249">
-            
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Eat Tasty</p>
-              
-          </div>
-          
-         <div class="col-xs-6 col-sm-3  center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="House Inmarsat" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_inmarsat.svg?1504692038859">
-          
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Inmarsat</p>
-              
-          </div>
-          
-          
-           <div class="col-xs-6 col-sm-3  center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="House Grow Health" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_grow.svg?1504692038782">
-        
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Grow Health</p>
-              
-          </div>
-          
-          
-           <div class="col-xs-6 col-sm-3  center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="House Microsoft" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_microsoft.svg?1504692039093">
-           
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Microsoft</p>
-              
-          </div>
-          
-          
-           <div class="col-xs-6 col-sm-3  center-xs">
-          <img class="col-xs-12  sponsor_img"  alt="House Mercedes" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_mercedes.svg?1504692038934">
-           
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Mercedes</p>
-              
-          </div>
-          
-          
-          <div class="col-xs-6 col-sm-3  center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="House NÓS" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_nos.svg?1504692039285">
-          
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House NOS</p>
-              
-          </div>
-          
-          
-          <div class="col-xs-6 col-sm-3  center-xs">
-          <img class="col-xs-12  sponsor_img"  alt="House Pipedrive" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_pipedrive.svg?1504692039362">
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Pipedrive</p>
-              
-          </div>
-          
-          
-           <div class="col-xs-6 col-sm-3  center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="House SONAE" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_sonae.svg?1504692039936">
-           
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House SONAE</p>
-              
-          </div>
-          
-          
-         <div class="col-xs-6 col-sm-3  center-xs">
-            <img class="col-xs-12  sponsor_img"  alt="House Siemens" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_siemens.svg?1504692039838">
-           
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Siemens</p>
-              
-          </div>
-          
-              <div class="col-xs-6 col-sm-3  center-xs">
-          <img class="col-xs-12  sponsor_img"  alt="House Probe.ly" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_probe.ly.svg?1504692039534">
-            
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Probe.ly</p>
-              
-          </div>
-          
-            <div class="col-xs-6 col-sm-3  center-xs">
-          <img class="col-xs-12  sponsor_img"  alt="House Whitesmith" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_whitesmith.svg?1504692040068">
-            
-            
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  House Whitesmith</p>
-              
-          </div>
-          
-          
-           <p class="col-xs-10 col-sm-12  footer_text u__text_lightest ">  <br><br> <br><br>Made with &hearts; by Whitesmith </p> 
-      </div>
-          
 
-    
-  
-  </body>
+        <div class="row center-xs">
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="Traveler's Badge" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_viajante.svg?1504694427018">
+                <p>Traveler's Badge</p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="Traveler's Badge 2" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_viajante.svg?1504694427018">
+                <p>Traveler's Badge 2</p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="Traveler's Badge 3" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_viajante3.svg?1504694427243">
+                <p>Traveler's Badge 3</p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="Winner Traveler Badge" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_melhor_viajante.svg?1504694427268">
+                <p>Winner Traveler Badge</p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House AWS" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_aws.svg?1504692038260">
+                <p>House AWS</p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Beta-i" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_beta-i.svg?1504692038619">
+                <p>House Beta-i</p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Bright Pixel" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_bright_pixel.svg?1504692038363">
+                <p>House Bright Pixel</p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Cigala" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_cigala.svg?1504692038623">
+                <p>House Cigala</p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Data Pitch" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_data%20pitch.svg?1504692038443">
+                <p>House Data Pitch</p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Feedzai" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_feedzai.svg?1504692039031">
+                <p>House Feedzai</p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Galp" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_galp.svg?1504692038449">
+                <p>House Galp</p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Eat Tasty" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_eat_tasy.svg?1504692038249">
+                <p>House Eat Tasty</p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Inmarsat" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_inmarsat.svg?1504692038859">
+                <p>House Inmarsat</p>
+            </div>
+
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Grow Health" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_grow.svg?1504692038782">
+                <p>House Grow Health</p>
+            </div>
+
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Microsoft" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_microsoft.svg?1504692039093">
+                <p>House Microsoft</p>
+            </div>
+
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Mercedes" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_mercedes.svg?1504692038934">
+                <p>House Mercedes</p>
+            </div>
+
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House NÓS" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_nos.svg?1504692039285">
+                <p>House NOS</p>
+            </div>
+
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Pipedrive" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_pipedrive.svg?1504692039362">
+                <p>House Pipedrive</p>
+            </div>
+
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House SONAE" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_sonae.svg?1504692039936">
+                <p>House SONAE</p>
+            </div>
+
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Siemens" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_siemens.svg?1504692039838">
+                <p>House Siemens</p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Probe.ly" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_probe.ly.svg?1504692039534">
+                <p>House Probe.ly</p>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="House Whitesmith" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_whitesmith.svg?1504692040068">
+                <p>House Whitesmith</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
 </html>
