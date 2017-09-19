@@ -1,87 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Game of Sponsors </title>
     <meta name="description" content="Game of Sponsors">
-    
-    
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-  
-    
-    <link rel="stylesheet" type="text/css" href="flexboxgrid.min.css">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
     <!--   Importing Flexbox Grid  -->
-    
-     <link rel="stylesheet" type="text/css" href="style.css">
-    <!--   Importing Flexbox Grid  -->
-    
+
+    <link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
+    <!--   Importing Main Styles  -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-    <script src="snow.js"></script>
+
+    <script src="js/snow.js"></script>
     <!--   Js Code for snow -->
-    
-    <link rel="shortcut icon"
-      type="image/png" 
-      href="https://cdn.glitch.com/8a53e8d1-af21-467f-8691-adaee1250b35%2Ficon_drag.png?1504299616488">
-    
-    
-    
-    
-    
-  </head>
-  <body class=" u__darkGrey outter_box u__full_height">
-    
-      
-        <canvas id="canvas"></canvas>
-      
-        <div class="row center-xs u__side_margin snow_overlay">
-          
-         <img class="col-xs-10 col-md-12 dragon_img"  alt="Ice Dragon" src="https://cdn.glitch.com/8a53e8d1-af21-467f-8691-adaee1250b35%2Fdragon.svg?1504284545840">
-          
-         <p class="col-xs-10 col-md-12 title u__text_lightGrey"> Game of <br> Sponsors
-         </p>
-       
-         <p class="col-xs-10 col-sm-7 col-md-6 col-lg-5 small_text u__text_lightGrey u__lowOpacity text-right u__margin_top_neg ">  Vallar Pixulis</p>
-           
-          <a class="col-xs-10 col-md-12  sm-margin-top" id="btn_first"> 
-            <button type="button" class=" btn-none text text-lightest text-bold u__text_lightBlue" >Push to start
-            </button>
-                 </a> 
-            
-         
-          
-          <p class="col-xs-10 col-sm-12  footer_text u__text_lightest ">  <br><br> <br><br>Made with &hearts; by Whitesmith </p> 
-      </div>
-      
-  
-    
+
+
+    <link rel="shortcut icon" type="image/png" href="https://cdn.glitch.com/8a53e8d1-af21-467f-8691-adaee1250b35%2Ficon_drag.png?1504299616488">
+</head>
+
+<body class="u-bg-dark u-relative u-no-overflow">
+
+    <canvas id="canvas"></canvas>
+
+
+    <div class="o-container__is-full o-container__is-absolute">
+        <div class="row u-flex--v-space-around">
+
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 u-text-center">
+                <img class="c-img--dragon" alt="Ice Dragon" src="https://cdn.glitch.com/8a53e8d1-af21-467f-8691-adaee1250b35%2Fdragon.svg?1504284545840">
+            </div>
+
+            <div class="col-xs-12 u-text-center">
+                <h1>
+            Game of 
+            <br> Sponsors
+          </h1>
+                <p class="u-color-light_blue">Vallar Pixulis</p>
+            </div>
+
+            <div class="col-xs-12 u-text-center">
+                <a id="btn_first" class="c-button c-button--dark">Push to start</a>
+            </div>
+
+            <div class="col-xs-12 u-text-center">
+                <p class="u-text-small">Made with &hearts; by Whitesmith</p>
+            </div>
+        </div>
+    </div>
+
     <script>
-   
-      
-    // local storage is supported on this browser
-if (typeof Storage !== "undefined") {
-  const storage = window.localStorage;
-  const hasVisited = storage.getItem("hasVisited");
+        // local storage is supported on this browser
+        if (typeof Storage !== "undefined") {
+            const storage = window.localStorage;
+            const hasVisited = storage.getItem("hasVisited");
 
-  // 1st visit
-  if (hasVisited == null) {
-   //document.querySelector("#btn_first").setAttribute('href','howto.html');
-    document.getElementById("btn_first").href="howto.html"; 
-  } else if (hasVisited != null) {
-   document.querySelector("#btn_first").setAttribute('href','scan.html');
-    
-    }
-  
-
-  storage.setItem("hasVisited", "true");
-}
-  
-    
-    
+            // 1st visit
+            if (hasVisited == null) {
+                //document.querySelector("#btn_first").setAttribute('href','howto.html');
+                document.getElementById("btn_first").href = "howto.html";
+            } else if (hasVisited != null) {
+                document.querySelector("#btn_first").setAttribute('href', 'scan.html');
+            }
+            storage.setItem("hasVisited", "true");
+        }
     </script>
-     
-    
-  </body>
+
+</body>
+
 </html>

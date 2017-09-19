@@ -1,0 +1,440 @@
+/*
+ * BASE STYLES
+ * ================================ */
+
+html { box-sizing: border-box; }
+
+html,
+html:before,
+html:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+  height: 100%; 
+  -webkit-text-size-adjust: 100%; 
+     -ms-text-size-adjust: 100%; 
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;   
+}
+
+body{
+  color: #D3E4E5; /* Light */
+  font-stretch: normal;
+  font-variant: normal;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+fieldset, legend,
+figure,
+hr {
+  margin:  0;
+  padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+/**
+ * Remove automatic resize command
+ */
+button{
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/**
+ * Remove browser border on inputs
+ */
+input,
+textarea{
+  border: none;
+}
+
+
+/*
+ * IMPORT
+ * ================================ */
+
+@font-face {
+  font-family: "Emulogic";
+  src: url(https://cdn.glitch.com/8a53e8d1-af21-467f-8691-adaee1250b35%2Femulogic.ttf?1504282467216); 
+}
+
+@font-face {
+  font-family: "Bit Madness";
+  src: url(https://cdn.glitch.com/8a53e8d1-af21-467f-8691-adaee1250b35%2F8-Bit%20Madness.ttf?1504282530705); 
+}
+
+
+/*
+ * CANVAS 
+ * ================================ */
+
+.particle{
+    background:white;
+    position:absolute;
+}
+
+#canvas{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+ .outter_box {
+  position: relative;
+}
+.outter_box #canvas, .snow_overlay {
+  position: absolute;
+}
+
+
+/*
+ * TYPOGRAPHY
+ * ================================ */
+
+h1,
+h2{
+  font-family: "Emulogic", monospace, sans-serif;
+}
+
+h1{
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #79989D;
+  
+  margin-bottom: 1rem;
+}
+
+h2{
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  letter-spacing: 1px; 
+  text-shadow: 2px 2px 0 #79989D;
+  
+  margin-bottom: 1.5rem;
+}
+
+p,
+a,
+input,
+textarea,
+button{
+  font-family: "Bit Madness", monospace, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.u-text-small{
+  font-size: 0.9rem;
+}
+
+a{
+  color: inherit;
+  /*text-decoration: none;*/
+}
+
+
+/*
+ * SKELETON
+ * ================================ */
+  
+.row{
+  margin: 1rem 0;
+}
+
+.o-container{
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.o-container__is-full{
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+.o-container__is-absolute{
+  position: absolute; 
+  top: 0;
+  left: 0;
+}
+
+
+/*
+ * COLORING
+ *
+ * #262828 (dark)
+ * #79989D (light blue)
+ * #3A4447 (dark blue)
+ * #D3E4E5 (light)
+ * ================================ */
+
+.u-bg-dark { background-color: #262828; }
+
+.u-bg-blue { background-color: #79989D; } /* Light Blue */
+
+.u-bg-light{ background-color: #D3E4E5; }
+
+
+/* Elements */
+
+.u-color-dark { color: #262828; } 
+
+.u-color-light_blue{ color: #79989D; }
+
+.u-color-dark_blue { color: #3A4447; }
+
+.u-color-light { color: #D3E4E5;}
+
+
+/*
+ * SPACING
+ * ================================ */
+
+.u-mb-small { margin-bottom: 0.5rem; }
+.u-mb-medium{ margin-bottom: 1rem; }
+.u-mb-large { margin-bottom: 1.5rem; }
+
+
+/*
+ * BUTTONS
+ * ================================ */
+
+.c-button{
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.c-button--full{
+  display: block;
+  text-align: center;
+}
+
+.c-button--light{
+  background-color: #79989D;
+  box-shadow: 2px 2px 0 #D3E4E5;
+  color: white;
+}
+
+.c-button--dark{
+  background-color: #3A4447;
+  box-shadow: 2px 2px 0 #262828;
+  color: white;
+}
+
+
+
+/*
+ * BADGES
+ * ================================ */
+
+.c-badge{
+  width: 80%;
+  margin: 0 auto 1rem;
+}
+
+
+/*
+ * IMAGE FRAME
+ * ================================ */
+.c-img--dragon{
+  width: 80%;
+  margin: auto;
+}
+
+
+/*
+ * HAMBURGUER MENU
+ * ================================ */
+.c-drawer-toggle{
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #7E9499;
+  box-shadow: 2px 2px 0 #D3E4E5;
+
+  position: fixed;
+  top: 25px;
+  left: 15px;
+}
+
+
+/* In small devices, when the title is too big it overlaps with hamburguer button */
+@media screen and (min-width: 360px) {
+  .c-drawer-toggle{
+    left: 25px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h2{
+    margin-left: 1.5rem;
+  }
+}
+/* ------ */
+
+
+.c-drawer{
+  position: fixed;
+  top: 0px;
+  left: -60%;
+  z-index: 1100;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height: 100vh;
+
+  background: #d3e4e5;
+  box-shadow: 2px 0px 8px rgba(211, 228, 229, 0.3);
+
+  transition: all 1s ease;
+  transform: translate3d(-100%,0,0);
+}
+
+  @media screen and (min-width: 600px){
+    .c-drawer{
+      left: -40%;
+      width: 40%;
+    }
+  }
+
+
+.c-drawer-controller{
+  display: none;
+}
+
+.c-drawer-controller:checked ~ .c-drawer {
+  left: 0px;
+  transform: translate3d(0%,0,0);
+}
+
+.c-drawer-controller {
+    position: fixed;
+}
+
+.c-drawer-toggle {
+    cursor: pointer;
+}
+
+.c-drawer__header{  
+  background-color: #171818;
+  text-align: center;
+  padding: 1.8rem 0;
+}
+
+.c-drawer__header .c-img--dragon{
+  width: 80%;
+  margin: auto;
+}
+
+  @media screen and (min-width: 600px){
+    .c-drawer__header .c-img--dragon{
+      width: 50%;
+    }
+  }
+
+  @media screen and (min-width: 960px){
+    .c-drawer__header .c-img--dragon{
+      width: 30%;
+    }
+  }
+
+
+.c-drawer__body{
+  text-align: center;
+}
+
+.c-drawer__body li{
+  padding: 1rem 0;
+}
+
+.c-drawer__body li a{
+  color: #171818;
+  font-size: 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.c-drawer__footer p,
+.c-drawer__footer a {
+  text-align: center;
+  color: #171818;
+  opacity: 0.6;
+}
+
+.c-drawer__backdrop{
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  opacity: 0;
+  transition: opacity 0.15s 0s, visibility 0.15s 0.15s;
+  pointer-events:none;
+  visibility: hidden;
+}
+
+.c-drawer-controller:checked ~ .c-drawer__backdrop {
+  z-index: 1091;
+  opacity: 1;
+  transition-delay: 0s;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+
+/*
+ * HELPERS
+ * ================================ */
+
+/* Text Position */
+
+.u-text-center{ text-align: center; }
+
+.u-text-left{ text-align: left; }
+
+.u-text-right{ text-align: right; }
+
+.u-relative { position: relative; }
+
+
+/* Flex */
+
+.u-flex--v-space-around{
+  display: flex;
+  align-content: space-around;
+  height:100%;
+}
+
+/* General Display */
+
+.u-no-overflow{
+  overflow: hidden;
+}

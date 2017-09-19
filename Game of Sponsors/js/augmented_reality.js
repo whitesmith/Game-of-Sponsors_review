@@ -46,7 +46,7 @@ function show_sponsor(sponsor){
   show_questions(sponsor, 'true')
   show_answers(sponsor, 'true')
 }
-/*
+
 function on_right_answer(sponsor){
   show_answers(sponsor, 'false')
   show_questions(sponsor, 'false')
@@ -94,4 +94,4 @@ function set_events(){
 
 document.addEventListener("DOMContentLoaded", function() {
     set_events()
-}, false);*/
+}, false);
