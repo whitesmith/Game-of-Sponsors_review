@@ -11,49 +11,49 @@
     
   
     
-    <link rel="stylesheet" type="text/css" href="flexboxgrid.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/flexboxgrid.min.css">
     <!--   Importing Flexbox Grid  -->
     
-     <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
     <!--   Importing Flexbox Grid  -->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
-    <script src="snow.js"></script>
+    <script src="js/snow.js"></script>
     <!--   Js Code for snow -->
     
     <link rel="shortcut icon"
       type="image/png" 
       href="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fcastle_c.png?1504708306759">
     
-    
-    
-    
-    
   </head>
-  <body class=" u__darkGrey outter_box u__full_height">
-   
+  
+ <body class="u-bg-light u-relative u-no-overflow">
+
+    <canvas id="canvas"></canvas>
       
-        <canvas id="canvas"></canvas>
-      
-        <div class="row center-xs u__side_margin snow_overlay ">
-          
-         <img class="col-xs-10 col-md-12 castle_img sm-margin-top"  alt="Castle Bright" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fcastle_c.svg?1504707457896">
-          
-         <p class="col-xs-10 col-md-12 title u__text_lightGrey"> <br>Castle Quest
-         </p>
        
-         <p class="col-xs-10 col-sm-7 col-md-6 col-lg-5 small_text u__text_lightGrey u__lowOpacity text-right u__margin_top_neg ">  Vallar Pixulis</p>
-           
-          <a class="col-xs-10 col-md-12  sm-margin-top" id="btn_first"> 
-            <button type="button" class=" btn-none text text-lightest text-bold u__text_lightBlue" >Push to start
-            </button>
-                 </a> 
-            
-        
+    <div class="o-container__is-full o-container__is-absolute">
+        <div class="row u-flex--v-space-around">
+
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 u-text-center">
+         <img class="c-img--dragon "  alt="Castle Bright" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fcastle.svg?1505471784717">
+               </div>
           
-            <p class="col-xs-10 col-sm-12  footer_text u__text_lightGrey ">  <br><br>Made with &hearts; by Whitesmith </p>
-      </div>
+         <div class="col-xs-12 u-text-center  u-color-dark_blue ">
+           <h1>
+             Castle Quest
+           </h1>
+         
+       <div class="col-xs-12 u-text-center">
+                <a id="btn_first" class="c-button c-button--dark">Push to start</a>
+            </div>
+
+            <div class="col-xs-12 u-text-center">
+                <p class="u-text-small">Made with &hearts; by Whitesmith</p>
+            </div>
+        </div>
+    </div>
           
    
     

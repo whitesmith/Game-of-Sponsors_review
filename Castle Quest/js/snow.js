@@ -39,7 +39,7 @@ $(function(){
     s.canvas = s.$el.is('canvas');
     s.opts = $.extend(s, {
       minopacity: 0.05,
-      color: '#fff',
+      color: '#000',
       focalpoint: {
           x:s.$el[0].width/2,
           y:s.$el[0].height/2,

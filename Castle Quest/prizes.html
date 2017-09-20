@@ -11,16 +11,20 @@
     
   
     
-    <link rel="stylesheet" type="text/css" href="flexboxgrid.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/flexboxgrid.min.css">
     <!--   Importing Flexbox Grid  -->
     
-     <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
     <!--   Importing Flexbox Grid  -->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
-    <script src="snow.js"></script>
-    <!--   Js Code for snow -->
+   <script>
+        $(function () {
+            $("#navbar").load("components/navbar.html");
+        });
+    </script>
+    <!--   Navbar Import -->
     
     <link rel="shortcut icon"
       type="image/png" 
@@ -28,160 +32,123 @@
     
     
   </head>
-  <body class=" u__darkGrey outter_box ">
-    
-    <input type="checkbox" id="nav-trigger" class="nav-controller" />
-    <header class="row center-xs section-resized">
-      <div class="col-xs-10 col-sm-12 text-left">
-        <label class="nav-trigger~~display" for="nav-trigger"  tabindex="-1">
-            <div class="button--icon-container">
-                <span class="icon icon--hamburger"></span>
-            </div>
-        </label>
-      </div>
-    </header>
-    
-    <aside class="nav  center-xs">
-        <label class="overlay " for="nav-trigger"></label>  
-        <div class="nav__body ">
-            <div class="nav__header">
-                <a class=" text" href="index.html">  <img class="col-xs-10 col-md-12 castle_icon"  alt="Castle" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fcastle_menu.svg?1505211753382"> </a>
-            </div>
+  <body class="u-bg-light">
 
-            <ul class="nav__list">
-              
-                 <li class="nav__item" for="nav-trigger">
-                    <a class="nav__link text" href="howto.html">Gameplay </a>
-                </li>
-                
-                   <li class="nav__item" for="nav-trigger">
-                     <a class="nav__link text" href="scan.html">Scanner</a>
-                </li>
-                
-                   <li class="nav__item" for="nav-trigger">
-                    <a class="nav__link nav_highlight text" href="prizes.html">Prizes </a>
-                </li>
-                
-                  <li class="nav__item" for="nav-trigger">
-                    <a class="nav__link text" href="castles.html">Castles </a>
-                </li>
-              
-               <li class="nav__item  row " for="nav-trigger">
-       <p class=" u__lowOpacity col-xs-12 center-xs nav__footer" >Made with &hearts; by <a  target="blank" href="www.whitesmith.co">Whitesmith </a> </p> 
-        </li>
-            </ul>
+    <div id="navbar"></div>
+
+    <div class="o-container">
+
+        <div class="row">
+            <div class="center-xs col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+                <h2 class="u-title-has-shadow u-color-dark_blue ">Prizes</h2>
+            </div>
         </div>
-     
-    </aside>  
-      
-        <div class="row center-xs  section-resized">
-          
-        
-         <p class="col-xs-10 col-sm-12 semi_title u__text_lightest ">Prizes<br> <br> </p>
        
         
           
-           <div class="col-xs-6 col-sm-3  center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="Conqueror Badge" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_conquistador.svg?1504696907844">
+         <div class="row center-xs">
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge"  alt="Conqueror Badge" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_conquistador.svg?1504696907844">
           
             
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity"> Conqueror Badge</p>
+            <p class="u-color-dark_blue"> Conqueror Badge</p>
               
           </div>
           
-          
-           <div class="col-xs-6 col-sm-3  center-xs">
-            <img class="col-xs-12  sponsor_img"  alt="Conqueror Badge 2" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_conquistador3.svg?1504696908081">
+     
+
+            <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="Conqueror Badge 2" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_conquistador3.svg?1505827415866">
            
             
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  Conqueror Badge 2</p>
+            <p class="u-color-dark_blue">  Conqueror Badge 2</p>
               
           </div>
           
           
-         <div class="col-xs-6 col-sm-3  center-xs">
-          <img class="col-xs-12  sponsor_img"  alt="Conqueror Badge 3" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_conquistador2.svg?1504696908093">
+          <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="Conqueror Badge 3" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_conquistador2.svg?1505827415858">
            
             
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  Conqueror Badge 3</p>
+            <p class="u-color-dark_blue">  Conqueror Badge 3</p>
               
           </div>
           
           
-          <div class="col-xs-6 col-sm-3  center-xs">
-            <img class="col-xs-12  sponsor_img"  alt=" Winner Conqueror Badge" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_melhor_conquistador.svg?1504696908543">
+         <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge"  alt=" Winner Conqueror Badge" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_melhor_conquistador.svg?1505827415780">
           
             
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  Winner Conqueror Badge</p>
+            <p class="u-color-dark_blue">  Winner Conqueror Badge</p>
               
           </div>
           
           
           
-         <div class="col-xs-6 col-sm-3  center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="Castle Bard" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_bard.svg?1504694608275">
+          <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge"  alt="Castle Bard" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_bard.svg?1505827839626">
           
             
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity"> Castle Bard</p>
+            <p class="u-color-dark_blue"> Castle Bard</p>
               
           </div>
           
-          
-        <div class="col-xs-6 col-sm-3  center-xs">
-            <img class="col-xs-12  sponsor_img"  alt="Castle Bright" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_bright.svg?1504694608475">
+        <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge"  alt="Castle Bright" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_bright.svg?1505827839747">
            
             
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  Castle Bright</p>
+            <p class="u-color-dark_blue">  Castle Bright</p>
               
           </div>
           
           
-         <div class="col-xs-6 col-sm-3  center-xs">
-          <img class="col-xs-12  sponsor_img"  alt="Castle Minerva" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_minerva.svg?1504694608657">
+           <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge"  alt="Castle Minerva" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_minerva.svg?1504694608657">
            
             
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  Castle Minerva</p>
+            <p class="u-color-dark_blue">  Castle Minerva</p>
               
           </div>
           
           
-         <div class="col-xs-6 col-sm-3  center-xs">
-            <img class="col-xs-12  sponsor_img"  alt="Castle Waterfall" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_waterfall.svg?1504694609492">
+         <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="Castle Waterfall" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_waterfall.svg?1505827839813">
           
             
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  Castle Waterfall</p>
+            <p class="u-color-dark_blue">  Castle Waterfall</p>
               
           </div>
           
           
-        <div class="col-xs-6 col-sm-3 center-xs">
-            <img class="col-xs-12  sponsor_img"  alt="Castle No one" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_no_one.svg?1504694609101">
+          <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge"  alt="Castle No one" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_no_one.svg?1505827839544">
             
             
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  Castle No one</p>
+            <p class="u-color-dark_blue">  Castle No one</p>
               
           </div>
           
           
-        <div class="col-xs-6 col-sm-3 center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="Castle Feast" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_feast.svg?1504694608684">
+          <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge" alt="Castle Feast" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_feast.svg?1505827840367">
            
             
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  Castle Feast</p>
+            <p class="u-color-dark_blue">  Castle Feast</p>
               
           </div>
           
          
           
-         <div class="col-xs-6 col-sm-3 center-xs">
-           <img class="col-xs-12  sponsor_img"  alt="Castle Labor" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_labor.svg?1504694609091">
+         <div class="col-xs-6 col-sm-3 col-md-2 u-mb-medium">
+                <img class="c-badge"  alt="Castle Labor" src="https://cdn.glitch.com/f016cf4e-72b4-443a-8997-59638c98f017%2Fbadge_labor.svg?1504694609091">
            
             
-            <p class="col-xs-12  medium_text u__text_lightest u__lowOpacity">  Castle Labor</p>
+            <p class="u-color-dark_blue">  Castle Labor</p>
               
           </div>
           
-           <p class="col-xs-10 col-sm-12  footer_text u__text_lightest ">  <br><br>Made with &hearts; by Whitesmith </p>
+      </div>
       </div>
           
    
